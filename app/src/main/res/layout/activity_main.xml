@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/div1"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="11dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tlePantallaInicio" />
+
+    <TextView
+        android:id="@+id/tlePantallaInicio"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="@font/outfit_light"
+        android:text="Mis Recetas"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/div1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/btnBuscar"
+        android:layout_width="368dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIrCrearReceta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div1" />
+
+    <Button
+        android:id="@+id/btnIrCrearReceta"
+        android:layout_width="370dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="#FF1744"
+        android:fontFamily="@font/outfit_semi_bold"
+        android:text="Agregar Receta"
+        app:layout_constraintBottom_toTopOf="@+id/rcyViewListaRecetas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="24dp"
+        android:text="Salir"
+        android:backgroundTint="#FF1744"
+        android:fontFamily="@font/outfit_semi_bold"
+        app:layout_constraintBottom_toTopOf="@+id/div1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tlePantallaInicio"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyViewListaRecetas"
+        android:layout_width="400dp"
+        android:layout_height="506dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIrCrearReceta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

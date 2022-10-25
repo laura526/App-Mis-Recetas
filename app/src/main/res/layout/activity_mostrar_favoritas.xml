@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MostrarFavoritasActivity">
+
+    <ImageButton
+        android:id="@+id/btnFRegresar"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/txtFavoritas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_atras"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtFavoritas"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="33dp"
+        android:text="Recetas Favoritas"
+        android:textColor="@color/black"
+        android:fontFamily="@font/outfit_semi_bold"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFRegresar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyViewListaRecetasFavoritas"
+        android:layout_width="405dp"
+        android:layout_height="575dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFavoritas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
